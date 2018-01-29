@@ -12,6 +12,7 @@ using TwitterLikeApi.Models;
 
 namespace TwitterLikeApi.Controllers
 {
+    [Authorize]
     public class TweetsController : ApiController
     {
         private TwitterLikeApiContext db = new TwitterLikeApiContext();

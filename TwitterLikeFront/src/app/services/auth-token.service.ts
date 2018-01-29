@@ -8,7 +8,7 @@ export class AuthTokenService {
   login(token: string) {
     localStorage.setItem('currentUser', token);
   }
-  
+
   logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('currentUser');

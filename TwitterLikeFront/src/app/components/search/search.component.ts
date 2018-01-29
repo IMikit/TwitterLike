@@ -19,7 +19,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.model.message = params['name']
+      this.model.message = params['name'];
     });
   }
 

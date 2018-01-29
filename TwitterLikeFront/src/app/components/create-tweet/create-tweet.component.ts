@@ -30,7 +30,7 @@ export class CreateTweetComponent {
         console.log(error);
         this.alertService.error(error.name);
         this.loading = false;
-      });;
+      });
   }
 
 }

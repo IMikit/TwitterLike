@@ -12,7 +12,7 @@ import { Account } from '../../models/account';
 })
 export class ResultComponent implements OnInit {
   private accounts: Account[];
-  
+
   constructor(
     private route: ActivatedRoute,
     private accountService: AccountService,

@@ -22,7 +22,7 @@ export class ShowTweetsComponent implements OnInit {
       if (id) {
         this.tweetService.getByAccountId(id).subscribe(data => {
           this.tweets = data;
-        })
+        });
       } else {
         this.tweetService.getAll().subscribe(data => {
           this.tweets = data;
