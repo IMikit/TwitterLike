@@ -1,5 +1,17 @@
-<app-header></app-header>
+﻿<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <app-header></app-header>
+        <div class="col-sm-8 col-sm-offset-2">
+            <router-outlet></router-outlet>
+            <alert></alert>            
+        </div>
+    </div>
+</div>
 
-<router-outlet></router-outlet>
-
-<app-footer></app-footer>
+<!-- credits -->
+<div class="text-center">
+    <p>
+        TwitterLike for Ingesup - WebApi
+    </p>
+</div>

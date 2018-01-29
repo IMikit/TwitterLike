@@ -1,0 +1,22 @@
+﻿<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h2>Connexion</h2>
+        <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" required />
+                <div *ngIf="f.submitted && !email.valid" class="help-block">L'email est requis</div>
+            </div>
+            <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                <label for="password">Mot de passe</label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+                <div *ngIf="f.submitted && !password.valid" class="help-block">Le mot de passe est requis</div>
+            </div>
+            <div class="form-group">
+                <button [disabled]="loading" class="btn btn-primary">Se connecter</button>
+                <a [routerLink]="['/register']" class="btn btn-link">Inscription</a>
+            </div>
+        </form>
+    </div>
+</div>
+<ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: true }"></ngx-loading>

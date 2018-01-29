@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using TwitterLikeApi.DTO;
 using TwitterLikeApi.Models;
 
 namespace TwitterLikeApi.Controllers
@@ -16,6 +17,13 @@ namespace TwitterLikeApi.Controllers
     public class AccountsController : ApiController
     {
         private TwitterLikeApiContext db = new TwitterLikeApiContext();
+
+        // GET: api/Accounts?name=
+        [Authorize]
+        public IEnumerable<DTOAccount> GetAccounts(string name)
+        {
+            return db.Accounts.Where(a => a.Name.Contains(name)).ToList().Select(a => a.ToDTO());
+        }
 
         // PUT: api/Accounts/5
         [Authorize]

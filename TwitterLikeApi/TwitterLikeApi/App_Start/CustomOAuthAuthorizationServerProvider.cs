@@ -18,8 +18,6 @@ namespace TwitterLikeApi
         {
             await Task.Run(delegate
             {
-                context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
-
                 using (var db = new TwitterLikeApiContext())
                 {
                     var user = db.Accounts.Where(a => a.Email == context.UserName && a.Password == context.Password).FirstOrDefault();

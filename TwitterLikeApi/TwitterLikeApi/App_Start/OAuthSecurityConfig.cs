@@ -15,6 +15,8 @@ namespace TwitterLikeApi
 
         public void Configuration(IAppBuilder app)
         {
+            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
+
             OAuthOptions = new OAuthAuthorizationServerOptions()
             {
                 TokenEndpointPath = new PathString("/Token"),

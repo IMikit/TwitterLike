@@ -1,0 +1,9 @@
+<app-search></app-search>
+<div class="col-md-6 col-md-offset-3">
+  <ul>
+    <li *ngFor="let account of accounts">
+      Nom du profil :
+      <a routerLink="/account/{{account.Id}}" routerLinkActive="active">{{account.Name}}</a>
+    </li>
+  </ul>
+</div>

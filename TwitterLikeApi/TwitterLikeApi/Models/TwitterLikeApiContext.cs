@@ -19,8 +19,9 @@ namespace TwitterLikeApi.Models
         {
         }
 
-        public System.Data.Entity.DbSet<TwitterLikeApi.Models.Profile> Profiles { get; set; }
 
         public System.Data.Entity.DbSet<TwitterLikeApi.Models.Account> Accounts { get; set; }
+
+        public System.Data.Entity.DbSet<TwitterLikeApi.Models.Tweet> Tweets { get; set; }
     }
 }
